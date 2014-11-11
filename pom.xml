@@ -15,6 +15,7 @@
     <logback.version>1.1.2</logback.version>
     <slf4j.version>1.7.7</slf4j.version>
     <spring.version>4.1.1.RELEASE</spring.version>
+    <spring.ldap.version>2.0.2.RELEASE</spring.ldap.version>
     <spring.security.version>3.2.5.RELEASE</spring.security.version>
   </properties>
   
@@ -33,7 +34,19 @@
       </exclusions>
     </dependency>
     
+    <!-- Spring LDAP -->
+    <dependency>
+      <groupId>org.springframework.ldap</groupId>
+      <artifactId>spring-ldap-core</artifactId>
+      <version>${spring.ldap.version}</version>
+    </dependency>
+    
     <!-- Spring Security -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-ldap</artifactId>
+      <version>${spring.security.version}</version>
+    </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-web</artifactId>
