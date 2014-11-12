@@ -13,6 +13,7 @@
   <properties>
     <jackson.version>2.4.3</jackson.version>
     <logback.version>1.1.2</logback.version>
+    <servlet.version>2.5</servlet.version>
     <slf4j.version>1.7.7</slf4j.version>
     <spring.version>4.1.1.RELEASE</spring.version>
     <spring.ldap.version>2.0.2.RELEASE</spring.ldap.version>
@@ -21,6 +22,13 @@
   
   <!-- Dependencies -->
   <dependencies>
+    <!-- Servlet -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>${servlet.version}</version>
+    </dependency>
+    
     <!-- Spring -->
     <dependency>
       <groupId>org.springframework</groupId>
