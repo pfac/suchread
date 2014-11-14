@@ -42,7 +42,18 @@
     </constructor-arg>
   </bean>
   
-  <s:http use-expressions="true" entry-point-ref="authenticationEntryPoint">
+  <bean id="headerTokenAuthFilter" class="com.iampfac.suchread.api.HeaderTokenAuthenticationFilter">
+    <constructor-arg>
+      <bean class="com.iampfac.suchread.api.HeaderTokenAuthenticationService">
+        <constructor-arg>
+          <bean class="com.iampfac.suchread.api.InMemoryAuthenticationRepository" />
+        </constructor-arg>
+      </bean>
+    </constructor-arg>
+  </bean>
+  
+  <s:http use-expressions="true" entry-point-ref="authenticationEntryPoint" >
+    <s:custom-filter ref="headerTokenAuthFilter" before="FORM_LOGIN_FILTER" />
     <s:intercept-url pattern="/api/**" access="authenticated" />
     <s:form-login authentication-success-handler-ref="authenticationSuccessHandler" authentication-failure-handler-ref="authenticationFailureHandler" />
     <s:logout />
