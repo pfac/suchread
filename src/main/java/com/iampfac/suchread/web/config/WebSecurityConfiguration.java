@@ -6,7 +6,7 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-import com.iampfac.suchread.config.SuchreadConfiguration;
+import com.iampfac.suchread.config.external.SuchreadConfiguration;
 
 @Configuration
 @EnableWebSecurity

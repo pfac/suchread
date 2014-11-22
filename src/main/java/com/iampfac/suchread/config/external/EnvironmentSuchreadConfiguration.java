@@ -1,4 +1,4 @@
-package com.iampfac.suchread.config;
+package com.iampfac.suchread.config.external;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

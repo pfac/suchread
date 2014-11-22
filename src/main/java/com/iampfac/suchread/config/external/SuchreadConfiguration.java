@@ -1,4 +1,4 @@
-package com.iampfac.suchread.config;
+package com.iampfac.suchread.config.external;
 
 public interface SuchreadConfiguration {
 
