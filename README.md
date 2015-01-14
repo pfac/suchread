@@ -1,6 +1,8 @@
 SuchRead
 ========
 
+[![Dependency Status](https://www.versioneye.com/user/projects/54b58815050646ca5c0000ac/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54b58815050646ca5c0000ac)
+
 A simple tracker for the stuff I read.
 
 It is also a proof of concept implementation for a webapp using Spring Security with some specific stuff (like an LDAP server). Because I need to learn this stuff.
