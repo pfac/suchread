@@ -9,7 +9,7 @@ import org.springframework.core.env.Environment;
 @Configuration
 @PropertySources({
 		@PropertySource("classpath:com/iampfac/suchread/default.properties"),
-		@PropertySource(value = "classpath*:suchread-*.properties", ignoreResourceNotFound = true),
+		@PropertySource(value = "classpath:com/iampfac/suchread/*.properties", ignoreResourceNotFound = true),
 		@PropertySource(value = "file://${HOME}/.suchread", ignoreResourceNotFound = true),
 		@PropertySource(value = "file://${com.iampfac.suchread.configuration}", ignoreResourceNotFound = true) })
 public class EnvironmentSuchreadConfiguration implements SuchreadConfiguration {
