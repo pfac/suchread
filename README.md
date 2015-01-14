@@ -1,6 +1,7 @@
 SuchRead
 ========
 
+[![Build Status](https://travis-ci.org/pfac/suchread.svg?branch=master)](https://travis-ci.org/pfac/suchread)
 [![Dependency Status](https://www.versioneye.com/user/projects/54b58815050646ca5c0000ac/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54b58815050646ca5c0000ac)
 
 A simple tracker for the stuff I read.
