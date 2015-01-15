@@ -13,18 +13,46 @@ It is also a proof of concept implementation for a webapp using Spring Security 
 ``` sh
 git clone https://github.com/pfac/suchread.git
 cd suchread
-mvn clean package install
+mvn clean package
 ```
 
 ## Running the application
 
-After building the application, there should be a file `target/suchread.war`, which has to be deployed in an application server (tested with [Tomcat 7][1]).
+After building the application, there should be a file `target/suchread.war`, which has to be deployed in a servlet container. [Jetty][jetty] and [Tomcat][tomcat] have been embedded in the project for convenience, but you can use any container or application server ([IBM WebSphere][websphere], [Oracle Weblogic][weblogic], [JBoss AS][jboss-as], etc...)
 
 At the moment, authentication is performed against an LDAP server. Change [spring-security.xml](src/main/webapp/WEB-INF/spring-security.xml) with the correct information regarding your target LDAP server.
 
+### Embedded Jetty
+
+In most cases, Jetty is preferred due to a faster loading time. Run the following command in a shell:
+
+``` sh
+mvn jetty:run
+```
+
+Afterwards, the application should be accessible on `http://localhost:8080/`.
+
+Jetty's runner is also copied to `target/dependency/jetty-runner.jar` during the build process. So, alternatively, you can start the server by running:
+
+``` sh
+java $JAVA_OPTS -jar target/dependency/jetty-runner.jar target/suchread.war
+```
+
+This requires the application to be built with a separate command, but does not require `mvn` to be in the shell `PATH` to run the server, thus allowing to deploy the application in services like [Heroku][heroku].
+
+### Embedded Tomcat
+
+Alternatively, should you prefer to use Tomcat, start the server by running:
+
+``` sh
+mvn tomcat7:run
+```
+
+Afterwards, the application should be accessible on `http://localhost:8080/suchread/`.
+
 ## Testing the application
 
-After deploying the WAR file to an application server, an *Hello World* page should be acessible through `/suchread/` (if using a local Tomcat, for instance, it would be `http://localhost:8080/suchread/`).
+This assumes that the application has been deployed successfully and is correctly configured. 
 
 Trying to access the API without authenticating should return `401 Unauthorized`:
 
@@ -84,4 +112,9 @@ Note that, at the moment, tokens do not expire, but are only persisted in memory
 
 Project under the [MIT License](http://opensource.org/licenses/MIT). Copyright (c) 2014 [Pedro Costa](https://github.com/pfac)
 
-[1]: http://tomcat.apache.org/
+[heroku]: https://www.heroku.com/
+[jboss-as]: http://jbossas.jboss.org/
+[jetty]: http://www.eclipse.org/jetty/
+[tomcat]: http://tomcat.apache.org/
+[weblogic]: http://www.oracle.com/us/products/middleware/cloud-app-foundation/weblogic/overview/index.html
+[websphere]: www.ibm.com/websphere/
