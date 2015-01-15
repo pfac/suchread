@@ -1,1 +1,1 @@
-web: mvn tomcat7:run
+web: java -jar target/dependency/jetty-runner.jar target/suchread.war
