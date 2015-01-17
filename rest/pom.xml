@@ -12,12 +12,13 @@
   <name>SuchRead REST API</name>
   <description>REST API delivery mechanism for a SuchRead application.</description>
   
+  <!-- Dependencies -->
   <dependencies>
     <dependency>
       <groupId>com.iampfac</groupId>
       <artifactId>suchread-core</artifactId>
     </dependency>
-  
+    
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
