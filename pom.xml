@@ -46,6 +46,11 @@
         <artifactId>suchread-core</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.iampfac</groupId>
+        <artifactId>suchread-rest</artifactId>
+        <version>${project.version}</version>
+      </dependency>
 
       <!-- Servlet -->
       <dependency>

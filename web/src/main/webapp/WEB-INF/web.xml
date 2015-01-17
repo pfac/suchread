@@ -9,7 +9,7 @@
   
   <context-param>
     <param-name>contextConfigLocation</param-name>
-    <param-value>com.iampfac.suchread.web.config.WebApplicationConfiguration</param-value>
+    <param-value>com.iampfac.suchread.spring.WebApplicationConfiguration</param-value>
   </context-param>
   
   <listener>
@@ -25,7 +25,7 @@
     </init-param>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <param-value>com.iampfac.suchread.web.config.WebMvcConfiguration</param-value>
+      <param-value>com.iampfac.suchread.spring.RestConfiguration</param-value>
      </init-param>
     <load-on-startup>0</load-on-startup>
   </servlet>
@@ -34,20 +34,8 @@
     <servlet-name>api</servlet-name>
     <url-pattern>/api/*</url-pattern>
   </servlet-mapping>
-  
-  <filter>
-    <filter-name>springSecurityFilterChain</filter-name>
-    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-  </filter>
-  
-  <filter-mapping>
-    <filter-name>springSecurityFilterChain</filter-name>
-    <url-pattern>/*</url-pattern>
-  </filter-mapping>
 
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
