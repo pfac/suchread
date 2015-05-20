@@ -1,1 +1,7 @@
+# Eclipse IDE generated files
+.classpath
+.project
+.settings/
+
+# Maven generated artifacts
 target/
