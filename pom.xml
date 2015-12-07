@@ -28,16 +28,16 @@
     <logback.version>1.1.3</logback.version>
     <mockito.version>1.10.19</mockito.version>
     <servlet.version>3.1.0</servlet.version>
-    <slf4j.version>1.7.12</slf4j.version>
-    <spring.version>4.2.2.RELEASE</spring.version>
+    <slf4j.version>1.7.13</slf4j.version>
+    <spring.version>4.2.3.RELEASE</spring.version>
     <spring.ldap.version>2.0.4.RELEASE</spring.ldap.version>
-    <spring.security.version>4.0.2.RELEASE</spring.security.version>
+    <spring.security.version>4.0.3.RELEASE</spring.security.version>
     
     <!-- plugins -->
     <maven.dependency.version>2.10</maven.dependency.version>
     <cobertura.version>2.7</cobertura.version>
-    <coveralls.version>4.0.0</coveralls.version>
-    <jetty.version>9.3.5.v20151012</jetty.version>
+    <coveralls.version>4.1.0</coveralls.version>
+    <jetty.version>9.3.6.v20151106</jetty.version>
   </properties>
   
   <!-- Dependencies -->
