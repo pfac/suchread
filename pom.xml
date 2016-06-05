@@ -39,6 +39,7 @@
     <coveralls.version>4.2.0</coveralls.version>
     <jetty.version>9.3.9.v20160517</jetty.version>
     <maven.compiler.version>3.5.1</maven.compiler.version>
+    <versioneye.maven.version>3.9.2</versioneye.maven.version>
   </properties>
   
   <!-- Dependencies -->
@@ -231,6 +232,11 @@
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.2</version>
+      </plugin>
+      <plugin>
+        <groupId>com.versioneye</groupId>
+        <artifactId>versioneye-maven-plugin</artifactId>
+        <version>${versioneye.maven.version}</version>
       </plugin>
     </plugins>
   </build>
