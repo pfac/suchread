@@ -1,9 +1,9 @@
 SuchRead
 ========
 
-> _**This project is now retired**.
+> _**This project is now retired**._
 >
-> I created this project back in 2014 to be a reference for me and the community. I have long since stopped working with Java in general and Spring in particular.
+> _I created this project back in 2014 to be a reference for me and the community. I have long since stopped working with Java in general and Spring in particular._
 
 A simple tracker for the stuff I read.
 
