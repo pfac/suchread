@@ -1,9 +1,9 @@
 SuchRead
 ========
 
-[![Build Status](https://travis-ci.org/pfac/suchread.svg?branch=master)](https://travis-ci.org/pfac/suchread)
-[![Coverage Status](https://coveralls.io/repos/pfac/suchread/badge.svg)](https://coveralls.io/r/pfac/suchread)
-[![Dependency Status](https://www.versioneye.com/user/projects/54b58815050646ca5c0000ac/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54b58815050646ca5c0000ac)
+> _**This project is now retired**.
+>
+> I created this project back in 2014 to be a reference for me and the community. I have long since stopped working with Java in general and Spring in particular.
 
 A simple tracker for the stuff I read.
 
